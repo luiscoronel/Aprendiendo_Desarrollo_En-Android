@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Mi App</string>
     <string name="enviar">Enviar</string>
+    <string name="ir">Ir</string>
+    <string name="editar_texto">edicion</string>
+    <string name="mostrar_text">Mostar</string>
+    <string name="titulo">Escribe algo</string>
 </resources>
