@@ -1,5 +1,6 @@
 package android.aprendiendo.ar.miapp
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val btIr:Button = findViewById(R.id.btIr)
+
         btEnviar = findViewById(R.id.btEnviar)
         etIngresar = findViewById(R.id.etIngresar)
         tvMostrar = findViewById(R.id.tvMostrar)
@@ -33,6 +36,11 @@ class MainActivity : AppCompatActivity() {
 
             //Test with Toast
             //Toast.makeText(this, "Se acciono el boton enviar", Toast.LENGTH_SHORT).show()
+        }
+
+        btIr?.setOnClickListener {
+            val i = Intent(this, Main2Activity::class.java)
+            startActivity(i)
         }
 
 
