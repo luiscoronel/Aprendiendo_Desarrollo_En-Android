@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     var etIngresar:EditText? = null
     var tvMostrar:TextView? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,12 +26,9 @@ class MainActivity : AppCompatActivity() {
         etIngresar = findViewById(R.id.etIngresar)
         tvMostrar = findViewById(R.id.tvMostrar)
 
-
-
         btEnviar?.setOnClickListener{
 
             val texto = etIngresar?.text
-
             //Show text for screen
             tvMostrar?.setText(texto)
 
@@ -38,11 +36,11 @@ class MainActivity : AppCompatActivity() {
             //Toast.makeText(this, "Se acciono el boton enviar", Toast.LENGTH_SHORT).show()
         }
 
-        btIr?.setOnClickListener {
+        btIr.setOnClickListener {
+            val texto = etIngresar?.text
             val i = Intent(this, Main2Activity::class.java)
+            i.putExtra("CODIGO", texto.toString())
             startActivity(i)
         }
-
-
     }
 }
